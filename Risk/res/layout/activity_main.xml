@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/title_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.ramapo.csnyder.Risk.MainActivity" >
+    
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/risk_title"
+        android:text="@string/app_name"
+        android:textColor="#cc3333"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textSize="200sp"/>
+
+    <RelativeLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:text="@string/newGame"
+        android:textSize="40sp"
+        android:background="#e0e6ee"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/new_game_button"
+        android:onClick="newGame"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loadGame"
+        android:layout_toRightOf="@id/new_game_button"
+        android:layout_toEndOf="@id/new_game_button"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:textSize="40sp"
+        android:background="#e0e6ee"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/load_game_button"
+        android:onClick="loadGame"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteSaved"
+        android:layout_toRightOf="@id/load_game_button"
+        android:layout_toEndOf="@id/load_game_button"
+        android:textSize="40sp"
+        android:background="#e0e6ee"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/delete_saved_button"
+        android:onClick="deleteSavedGames"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rules"
+        android:layout_toRightOf="@id/delete_saved_button"
+        android:layout_toEndOf="@id/delete_saved_button"
+        android:textSize="40sp"
+        android:background="#e0e6ee"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/rules_button"
+        android:onClick="rules"/>
+    
+	</RelativeLayout>
+
+</RelativeLayout>

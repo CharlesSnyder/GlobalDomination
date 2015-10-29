@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Risk</string>
+    <string name="newGame">New Game</string>
+    <string name="loadGame">Load Game</string>
+    <string name="deleteSaved">Delete Saved Games</string>
+    <string name="rules">Rules</string>
+    <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="dialog_title">Select the files you would like to delete</string>
+    <string name="load">Select the file to load</string>
+    <string name="title_activity_player_select">Player Select</string>
+    <string name="players_select">Players</string>
+    <string name="difficulty_select">Difficulty</string>
+    <string name="colors_select">Color</string>
+    <string name="cpu_select">Select Player</string>
+    <string name="start_game">Start Game</string>
+    <string name="invalid_player">Invalid player</string>
+    <string name="invalid_color">Invalid color</string>
+    <string name="invalid_cpu_player">is an invalid player</string>
+    <string name="invalid_num_players">Invalid number of players</string>
+    <string name="invalid_num_players_message">Must have at least three players</string>
+    <string name="player_one">Player One</string>
+    <string name="player_two">Player Two</string>
+    <string name="player_three">Player Three</string>
+    <string name="player_four">Player Four</string>
+    <string name="player_five">Player Five</string>
+    <string name="player_six">Player Six</string>
+    <string name="roll_dice">Roll Dice</string>
+    <string name="trade_in">Trade in cards</string>
+    <string name="back">Back</string>
+    <string name="invalid_trade">Invalid Trade-in</string>
+    <string name="invalid_trade_message">The selected cards are not a match</string>
+    <string name="auto_message">You have received 2 bonus armies in this country</string>
+    <string name="card_bonus">Card Bonus</string>
+    <string name="ok">OK</string>
+    <string name="choice_message">Select which territory you would like to receive your two army bonus</string>
+    <string name="phase_one">Phase One</string>
+    <string name="phase_one_message">Select countries until all countries on the board have been chosen</string>
+    <string name="phase_one_instructions">Select a country to occupy</string>
+    <string name="number_of_cards_traded_in">Number of cards traded in:</string>
+    <string name="value_of_cards_traded_in">Card trade-in army bonus:</string>
+    <string name="user_army_total">Armies remaining: </string>
+    <string name="user_countries_total">Countries controlled:</string>
+    <string name="user_continents_total">Continents controlled:</string>
+    <string name="receive_armies">Receive Armies</string>
+    <string name="view_cards">View Cards</string>
+    <string name="end_turn">End Turn</string>
+    <string name="phase_two">Phase Two</string>
+    <string name="phase_two_message">Place your remaining armies in any of the countries you control</string>
+    <string name="save">Save</string>
+    <string name="save_game_name">What would you like to name the file?</string>
+    <string name="phase_two_instructions">Place armies in your countries</string>
+    <string name="country_taken">This country is already occupied, select again</string>
+    <string name="invalid_selection">Invalid Selection</string>
+    <string name="not_owned_country">You do not own this country</string>
+    <string name="phase_three_instructions_placement">Place your armies</string>
+    <string name="phase_three_instructions_capture">Capture enemy territories</string>
+
+    
+    <string name="phase_three">Attack Phase</string>
+    <string name="phase_four">Fortify Phase</string>
+    <string name="phase_four_instructions">Fortify your territories</string>
+    <string name="phase_four_message">Select one and only one territory to move troops from, then select an adjacent territory where you wish to move the units</string>
+    <string name="defend_title">Defending Territory</string>
+    <string name="defending_country">Defending country</string>
+    <string name="attacking_country">Attacking country</string>
+    <string name="defend">Defend</string>
+    <string name="defend_result">Defend Result</string>
+    <string name="attack_title">Attacking Territory</string>
+    <string name="attack">Attack</string>
+    <string name="attack_result">Attack Result</string>
+    
+    <string name="how_many_armies">How many armies would you like to place?</string>
+    <string name="army_placement">Army placement</string>
+    <string name="turn_in_cards">Turn in cards</string>
+    <string name="turn_in_card_message">You must turn in a set of cards</string>
+    <string name="armies_remaining">Armies remaining</string>
+    <string name="armies_remaining_message">You still have armies to place</string>
+    <string name="army_breakdown">Army Breakdown</string>
+    
+    <string name="no_armies_remaining">No armies remaining</string>
+    <string name="no_armies_remaining_message">No armies remaining, please select end turn to continue</string>
+    
+    <string name="invalid_attack_move">Invalid Move</string>
+    <string name="invalid_attack_move_message">You can only attack adjacent countries you do not own from countries with at least two armies</string>
+    <string name="invalid_fortify_move_message">You can only fortify regions that are connected by your own territories and must leave at least one army behind</string>
+    
+    <string name="captured_message">You have captured an enemy territory!</string>
+    <string name="captured_how_many">How many troops would you like to move into your new territory?</string>
+    
+    <string name="must_trade_in">Must trade in cards</string>
+    <string name="must_trade_in_message">You now have 6 or more cards and must reduce your hand to at least 4 cards</string>
+    
+    <string name="receive_card">You received a card for capturing a territory!</string>
+    <string name="receive_card_title">Receive Card</string>
+    
+    <string name="battle_results">Battle results</string>
+    
+    <string name="fortify_how_many_armies">How many troops would you like to move</string>
+    <string name="fortify_country">Fortify Country</string>
+    
+    <string name="player_eliminated">Player eliminated</string>
+    <string name="game_over">Game Over</string>
+    <string name="game_over_message">You lose</string>
+    <string name="victory">Victory</string>
+    <string name="victory_message">Congratulations, you are a Risk master!</string>
+
+    <string-array name="player_array">
+        <item>Human</item>
+    </string-array>
+    <string-array name="cpu_array">
+        <item>Empty</item>
+        <item>CPU</item>
+    </string-array>
+    <string-array name="not_avail">
+        <item>N/A</item>
+    </string-array>
+    <string-array name="difficulty_array">
+        <item>N/A</item>
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+    <string-array name="player_colors">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Purple</item>
+    </string-array>
+    <string-array name="ai_colors">
+        <item>Empty</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Purple</item>
+    </string-array>
+
+    <string name="title_activity_first_player">Determine The First Player</string>
+    <string name="title_activity_play_screen">Game Board</string>
+    <string name="title_activity_card">Your Cards</string>
+
+</resources>

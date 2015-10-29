@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView 
+        android:id="@+id/how_many_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_many_armies"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    
+    <Spinner
+        android:id="@+id/army_select_spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/how_many_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+    
+    <Button
+        android:id="@+id/ok_button_army_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/army_select_spinner"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ok" />
+
+
+</RelativeLayout>

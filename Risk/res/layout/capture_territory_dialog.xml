@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView 
+        android:id="@+id/capture_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/captured_how_many"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    
+    <Spinner
+        android:id="@+id/army_occupy_spinner"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/capture_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+    
+    <Button
+        android:id="@+id/ok_button_occupy_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/army_occupy_spinner"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ok" />
+
+
+</RelativeLayout>

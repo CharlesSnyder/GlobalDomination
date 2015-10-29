@@ -1,0 +1,850 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/map_black"
+    tools:context="com.example.countrytest.MainActivity">
+    
+    
+    
+    
+    <TextView 
+        android:id="@+id/num_cards_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/num_cards_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/num_cards_value"
+        android:layout_toLeftOf="@id/num_cards_value"
+        android:layout_toStartOf="@id/num_cards_value"       
+        android:text="@string/number_of_cards_traded_in"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/value_cards_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/num_cards_value"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/value_cards_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/value_cards_value"
+        android:layout_toLeftOf="@id/value_cards_value"
+        android:layout_toStartOf="@id/value_cards_value"       
+        android:text="@string/value_of_cards_traded_in"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/user_army_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/value_cards_value"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/user_army_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/user_army_value"
+        android:layout_toLeftOf="@id/user_army_value"
+        android:layout_toStartOf="@id/user_army_value"       
+        android:text="@string/user_army_total"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/country_controlled_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/user_army_value"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/country_controlled_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/country_controlled_value"
+        android:layout_toLeftOf="@id/country_controlled_value"
+        android:layout_toStartOf="@id/country_controlled_value"       
+        android:text="@string/user_countries_total"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="15sp"/>
+    
+    
+    <TextView 
+        android:id="@+id/cont_controlled_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/country_controlled_value"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="15sp"/>
+    
+    <TextView 
+        android:id="@+id/cont_controlled_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cont_controlled_value"
+        android:layout_toLeftOf="@id/cont_controlled_value"
+        android:layout_toStartOf="@id/cont_controlled_value"       
+        android:text="@string/user_continents_total"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="15sp"/>
+    
+    
+    <Button 
+        android:id="@+id/view_cards_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/cont_controlled_value"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        android:text="@string/view_cards"
+        android:visibility="gone"
+        android:onClick="viewCards" />
+    
+    <Button 
+        android:id="@+id/receive_army_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toLeftOf="@id/view_cards_button"
+        android:layout_toStartOf="@id/view_cards_button"
+        android:layout_alignBaseline="@id/view_cards_button"
+        android:textSize="12sp"
+        android:text="@string/receive_armies"
+        android:visibility="gone"
+        android:onClick="receiveArmies" />
+    
+    <Button 
+        android:id="@+id/end_turn_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/view_cards_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="12sp"
+        android:text="@string/end_turn"
+        android:visibility="gone"
+        android:onClick="endTurn"/>
+    
+    
+    
+
+    <Button 
+        android:id="@+id/alaska_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/alaska_country_pregame"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="alaskaSelection"/>
+    
+    <Button 
+        android:id="@+id/nw_terr_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/nw_terr_country_pregame"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="-19dp"
+        android:layout_marginStart="-19dp"
+        android:layout_toRightOf="@id/alaska_button"
+        android:layout_toEndOf="@id/alaska_button"
+        android:text="0"
+        android:gravity="center|bottom"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        android:onClick="nwSelection"/>
+    
+    <Button 
+        android:id="@+id/alberta_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/alberta_country_pregame"
+        android:layout_marginTop="-6dp"
+        android:layout_marginLeft="-8.3dp"
+        android:layout_marginStart="-8.3dp"
+        android:layout_toRightOf="@id/alaska_button"
+        android:layout_toEndOf="@id/alaska_button"
+        android:layout_below="@id/nw_terr_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="albSelection"/>
+    
+    <Button 
+        android:id="@+id/ontario_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/ontario_country_pregame"
+        android:layout_marginTop="-3.2dp"
+        android:layout_marginLeft="-2.8dp"
+        android:layout_marginStart="-2.8dp"
+        android:layout_toRightOf="@id/alberta_button"
+        android:layout_toEndOf="@id/alberta_button"
+        android:layout_below="@id/nw_terr_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="ontSelection"/>
+    
+    <Button 
+        android:id="@+id/quebec_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/quebec_country_pregame"
+        android:layout_marginTop="-11dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_toRightOf="@id/ontario_button"
+        android:layout_toEndOf="@id/ontario_button"
+        android:layout_below="@id/nw_terr_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="queSelection"/>
+    
+    <Button 
+        android:id="@+id/greenland_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/greenland_country_pregame"
+        android:layout_marginBottom="-20dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toRightOf="@id/nw_terr_button"
+        android:layout_toEndOf="@id/nw_terr_button"
+        android:layout_above="@id/quebec_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="greenSelection"/>
+    
+    <Button 
+        android:id="@+id/iceland_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/iceland_country_pregame"
+        android:layout_marginTop="110dp"
+        android:layout_toRightOf="@id/greenland_button"
+        android:layout_toEndOf="@id/greenland_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="iceSelection" />
+    
+    <Button 
+        android:id="@+id/scandinavia_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/scandinavia_country_pregame"
+        android:layout_marginTop="78dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/iceland_button"
+        android:layout_toEndOf="@id/iceland_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="scanSelection" />
+    
+    <Button 
+        android:id="@+id/ukraine_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/ukraine_country_pregame"
+        android:layout_marginTop="77dp"
+        android:layout_marginLeft="-28dp"
+        android:layout_marginStart="-28dp"
+        android:layout_toRightOf="@id/scandinavia_button"
+        android:layout_toEndOf="@id/scandinavia_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center" />
+    
+    <Button 
+        android:id="@+id/ural_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/ural_country_pregame"
+        android:layout_marginTop="51dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginStart="-5dp"
+        android:layout_toRightOf="@id/ukraine_button"
+        android:layout_toEndOf="@id/ukraine_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    <Button 
+        android:id="@+id/siberia_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/siberia_country_pregame"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="-63dp"
+        android:layout_marginStart="-63dp"
+        android:layout_toRightOf="@id/ural_button"
+        android:layout_toEndOf="@id/ural_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    
+    <Button 
+        android:id="@+id/yakutsk_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/yakutsk_country_pregame"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="-27dp"
+        android:layout_marginStart="-27dp"
+        android:layout_toRightOf="@id/siberia_button"
+        android:layout_toEndOf="@id/siberia_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center" />
+    
+    <Button 
+        android:id="@+id/kamchatka_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/kamchatka_country_pregame"
+        android:layout_marginTop="47dp"
+        android:layout_marginLeft="-45dp"
+        android:layout_marginStart="-45dp"
+        android:layout_toRightOf="@id/yakutsk_button"
+        android:layout_toEndOf="@id/yakutsk_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:paddingTop="15dp"
+        android:gravity="center|top" />
+    
+    
+    <Button 
+        android:id="@+id/irkutsk_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/irkutsk_country_pregame"
+        android:layout_marginTop="-17dp"
+        android:layout_marginLeft="-45dp"
+        android:layout_marginStart="-45dp"
+        android:layout_toRightOf="@id/siberia_button"
+        android:layout_toEndOf="@id/siberia_button"
+        android:layout_below="@id/yakutsk_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    <Button 
+        android:id="@+id/mongolia_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/mongolia_country_pregame"
+        android:layout_marginTop="-33dp"
+        android:layout_marginLeft="-35dp"
+        android:layout_marginStart="-35dp"
+        android:layout_toRightOf="@id/siberia_button"
+        android:layout_toEndOf="@id/siberia_button"
+        android:layout_below="@id/irkutsk_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    <Button 
+        android:id="@+id/japan_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/japan_country_pregame"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_toRightOf="@id/mongolia_button"
+        android:layout_toEndOf="@id/mongolia_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center|right"
+        android:paddingRight="11dp"/>
+    
+    
+    
+    <Button 
+        android:id="@+id/afghanistan_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/afghanistan_country_pregame"
+        android:layout_marginTop="-48dp"
+        android:layout_marginLeft="-52dp"
+        android:layout_marginStart="-52dp"
+        android:layout_toRightOf="@id/ukraine_button"
+        android:layout_toEndOf="@id/ukraine_button"
+        android:layout_below="@id/ural_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    <Button 
+        android:id="@+id/china_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/china_country_pregame"
+        android:layout_marginTop="-69dp"
+        android:layout_marginLeft="-17dp"
+        android:layout_marginStart="-17dp"
+        android:layout_toRightOf="@id/afghanistan_button"
+        android:layout_toEndOf="@id/afghanistan_button"
+        android:layout_below="@id/mongolia_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    
+    
+    
+    <Button 
+        android:id="@+id/great_britain_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/great_britain_country_pregame"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_toRightOf="@id/quebec_button"
+        android:layout_below="@id/iceland_button"
+        android:layout_toEndOf="@id/quebec_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:onClick="gbSelection" />
+    
+    <Button 
+        android:id="@+id/north_europe_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/north_europe_country_pregame"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toRightOf="@id/great_britain_button"
+        android:layout_below="@id/scandinavia_button"
+        android:layout_toEndOf="@id/great_britain_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="neSelection" />
+    
+    <Button 
+        android:id="@+id/west_europe_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/west_europe_country_pregame"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="-29dp"
+        android:layout_marginEnd="-29dp"
+        android:layout_below="@id/great_britain_button"
+        android:layout_toLeftOf="@id/north_europe_button"
+        android:layout_toStartOf="@id/north_europe_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="weSelection" />
+    
+    <Button 
+        android:id="@+id/south_europe_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/south_europe_country_pregame"
+        android:layout_marginTop="-27dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_toRightOf="@id/west_europe_button"
+        android:layout_below="@id/north_europe_button"
+        android:layout_toEndOf="@id/west_europe_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="15dp"
+        android:onClick="seSelection" />
+    
+    <Button 
+        android:id="@+id/middle_east_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/middle_east_country_pregame"
+        android:layout_marginTop="-9dp"
+        android:layout_marginLeft="-14dp"
+        android:layout_marginStart="-14dp"
+        android:layout_toRightOf="@id/south_europe_button"
+        android:layout_toEndOf="@id/south_europe_button"
+        android:layout_below="@id/ukraine_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="midEastSelection" />
+    
+    
+    <Button 
+        android:id="@+id/india_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/india_country_pregame"
+        android:layout_marginTop="-25dp"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginStart="-12dp"
+        android:layout_toRightOf="@id/middle_east_button"
+        android:layout_toEndOf="@id/middle_east_button"
+        android:layout_below="@id/afghanistan_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    <Button 
+        android:id="@+id/siam_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/siam_country_pregame"
+        android:layout_marginTop="-26dp"
+        android:layout_marginLeft="-14dp"
+        android:layout_marginStart="-14dp"
+        android:layout_toRightOf="@id/india_button"
+        android:layout_toEndOf="@id/india_button"
+        android:layout_below="@id/china_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:onClick="siamSelection" />
+    
+    <Button 
+        android:id="@+id/indonesia_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/indonesia_country_pregame"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-18dp"
+        android:layout_marginStart="-18dp"
+        android:layout_toRightOf="@id/india_button"
+        android:layout_toEndOf="@id/india_button"
+        android:layout_below="@id/siam_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="25dp"
+        android:paddingBottom="15dp"
+        android:onClick="indoSelection" />
+    
+    <Button 
+        android:id="@+id/new_guinea_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/new_guinea_country_pregame"
+        android:layout_marginTop="-7dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
+        android:layout_toRightOf="@id/indonesia_button"
+        android:layout_toEndOf="@id/indonesia_button"
+        android:layout_below="@id/siam_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="7dp"
+        android:onClick="guineaSelection" />
+    
+    <Button 
+        android:id="@+id/west_aust_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/west_aust_country_pregame"
+        android:layout_marginTop="-20dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_toRightOf="@id/india_button"
+        android:layout_toEndOf="@id/india_button"
+        android:layout_below="@id/indonesia_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center" />
+    
+    <Button 
+        android:id="@+id/east_aust_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/east_aust_country_pregame"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="-49dp"
+        android:layout_marginStart="-49dp"
+        android:layout_toRightOf="@id/west_aust_button"
+        android:layout_toEndOf="@id/west_aust_button"
+        android:layout_below="@id/new_guinea_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="30dp" />
+    
+    <Button 
+        android:id="@+id/west_us_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/west_us_country_pregame"
+        android:layout_marginTop="-3.5dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginStart="-2dp"
+        android:layout_toRightOf="@id/alaska_button"
+        android:layout_toEndOf="@id/alaska_button"
+        android:layout_below="@id/alberta_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="wusSelection"/>
+    
+    <Button 
+        android:id="@+id/east_us_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/east_us_country_pregame"
+        android:layout_marginTop="-22dp"
+        android:layout_marginLeft="-38dp"
+        android:layout_marginStart="-38dp"
+        android:layout_toRightOf="@id/west_us_button"
+        android:layout_toEndOf="@id/west_us_button"
+        android:layout_below="@id/ontario_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="eusSelection"/>
+    
+    <Button 
+        android:id="@+id/central_america_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/central_america_country_pregame"
+        android:layout_marginTop="-23dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_toRightOf="@id/alaska_button"
+        android:layout_toEndOf="@id/alaska_button"
+        android:layout_below="@id/west_us_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:onClick="camSelection"/>
+    
+    <Button 
+        android:id="@+id/venezuela_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/venezuela_country_pregame"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="-14dp"
+        android:layout_marginStart="-14dp"
+        android:layout_toRightOf="@id/west_us_button"
+        android:layout_toEndOf="@id/west_us_button"
+        android:layout_below="@id/west_us_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingRight="30dp"
+        android:paddingBottom="15dp"
+        android:onClick="venSelection"/>
+    
+    <Button 
+        android:id="@+id/peru_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/peru_country_pregame"
+        android:layout_marginTop="-22dp"
+        android:layout_marginLeft="-26dp"
+        android:layout_marginStart="-26dp"
+        android:layout_toRightOf="@id/west_us_button"
+        android:layout_toEndOf="@id/west_us_button"
+        android:layout_below="@id/venezuela_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:onClick="peruSelection"/>
+    
+    <Button 
+        android:id="@+id/brazil_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/brazil_country_pregame"
+        android:layout_marginTop="-34dp"
+        android:layout_marginLeft="-96dp"
+        android:layout_marginStart="-96dp"
+        android:layout_toRightOf="@id/peru_button"
+        android:layout_toEndOf="@id/peru_button"
+        android:layout_below="@id/venezuela_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center|top"
+        android:paddingTop="40dp" />
+    
+    <Button 
+        android:id="@+id/argentina_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/argentina_country_pregame"
+        android:layout_marginTop="-40dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_toRightOf="@id/central_america_button"
+        android:layout_toEndOf="@id/central_america_button"
+        android:layout_below="@id/peru_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="50dp"
+        android:onClick="argSelection"/>
+    
+    <Button 
+        android:id="@+id/west_africa_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/west_africa_country_pregame"
+        android:layout_marginTop="-37dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_toRightOf="@id/brazil_button"
+        android:layout_toEndOf="@id/brazil_button"
+        android:layout_below="@id/central_america_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="wafSelection"/>
+    
+    <Button 
+        android:id="@+id/egypt_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/egypt_country_pregame"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="-51dp"
+        android:layout_marginStart="-51dp"
+        android:layout_toRightOf="@id/west_africa_button"
+        android:layout_toEndOf="@id/west_africa_button"
+        android:layout_below="@id/south_europe_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="egSelection"/>
+    
+    <Button 
+        android:id="@+id/congo_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/congo_country_pregame"
+        android:layout_marginTop="36.5dp"
+        android:layout_marginLeft="-53dp"
+        android:layout_marginStart="-53dp"
+        android:layout_toRightOf="@id/west_africa_button"
+        android:layout_toEndOf="@id/west_africa_button"
+        android:layout_below="@id/egypt_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="congSelection"/>
+    
+    
+    <Button 
+        android:id="@+id/east_africa_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/east_africa_country_pregame"
+        android:layout_marginTop="-15dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginStart="-2dp"
+        android:layout_toRightOf="@id/west_africa_button"
+        android:layout_toEndOf="@id/west_africa_button"
+        android:layout_below="@id/egypt_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="60dp"
+        android:paddingRight="20dp"/>
+    
+    
+    <Button 
+        android:id="@+id/south_africa_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/south_africa_country_pregame"
+        android:layout_marginTop="-37dp"
+        android:layout_marginLeft="-44dp"
+        android:layout_marginStart="-44dp"
+        android:layout_toRightOf="@id/west_africa_button"
+        android:layout_toEndOf="@id/west_africa_button"
+        android:layout_below="@id/congo_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    
+    <Button 
+        android:id="@+id/madagascar_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/madagascar_country_pregame"
+        android:layout_marginTop="-24dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toRightOf="@id/south_africa_button"
+        android:layout_toEndOf="@id/south_africa_button"
+        android:layout_below="@id/east_africa_button"
+        android:text="0"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:onClick="madSelection"/>
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/scandinavia_button"
+        android:layout_alignStart="@id/scandinavia_button"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/receive_card_layout"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+        
+    	<Button 
+        	android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:id="@+id/receive_card_capture"
+        	android:layout_gravity="center" />
+    
+    	<TextView 
+        	android:layout_height="wrap_content"
+       	 	android:layout_width="wrap_content"
+        	android:id="@+id/receive_card_message"
+        	android:layout_marginTop="10dp"
+        	android:text="@string/receive_card"/>
+    	
+    	<Button 
+    	    android:layout_height="wrap_content"
+    	    android:layout_width="fill_parent"
+    	    android:id="@+id/receive_card_ok"
+    	    android:layout_marginTop="10dp"
+    	    android:text="@string/ok"/>
+    	
+    </LinearLayout>
+    
+
+    
+
+</RelativeLayout>

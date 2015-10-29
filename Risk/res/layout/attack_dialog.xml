@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView 
+        android:id="@+id/attack_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/attack_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+    
+    <LinearLayout 
+        android:id="@+id/table_columns_attack"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/attack_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+        
+        
+        <LinearLayout 
+            android:id="@+id/cpu_info_defend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="70dp"
+            android:layout_marginEnd="70dp">
+            
+            <TextView 
+                android:id="@+id/defending_country_text_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defending_country"/>
+            
+            <Button
+                android:id="@+id/defend_country_image_cpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+            
+            <TextView 
+                android:id="@+id/defend_army_count_cpu"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                 />
+             
+         </LinearLayout>
+        
+        
+        
+        
+        <LinearLayout 
+            android:id="@+id/human_attack_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            
+            <TextView 
+                android:id="@+id/attacking_country_text_human"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attacking_country"/>
+            
+            
+            <Button
+                android:id="@+id/attack_country_image_human"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+            
+            <TextView 
+                android:id="@+id/attack_army_count_human"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                />
+            
+            <RadioGroup
+                android:id="@+id/attack_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <RadioButton 
+                    android:id="@+id/attack_dice_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    />
+                
+                <RadioButton 
+                    android:id="@+id/attack_dice_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    />
+                
+                <RadioButton 
+                    android:id="@+id/attack_dice_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    />
+                
+             </RadioGroup>
+                
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table_columns_attack"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        
+     <Button 
+        android:id="@+id/attack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/attack"/>
+    
+    <Button 
+        android:id="@+id/cancel_attack_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/cancel"
+        android:layout_centerHorizontal="true"/>
+        
+    </LinearLayout>
+    
+
+    
+
+</RelativeLayout>

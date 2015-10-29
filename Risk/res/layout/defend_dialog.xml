@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TextView 
+        android:id="@+id/defend_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/defend_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+    
+    <LinearLayout 
+        android:id="@+id/table_columns"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/defend_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+        
+        
+        <LinearLayout 
+            android:id="@+id/human_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="70dp"
+            android:layout_marginEnd="70dp">
+            
+            <TextView 
+                android:id="@+id/defending_country_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defending_country"/>
+            
+            <Button
+                android:id="@+id/defend_country_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+            
+            <TextView 
+                android:id="@+id/defend_army_count"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                 />
+            
+            <RadioGroup
+                android:id="@+id/defend_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                
+                <RadioButton 
+                    android:id="@+id/defend_dice_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    />
+                
+                <RadioButton 
+                    android:id="@+id/defend_dice_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    />
+                
+             </RadioGroup>
+             
+         </LinearLayout>
+        
+        
+        
+        
+        <LinearLayout 
+            android:id="@+id/cpu_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            
+            <TextView 
+                android:id="@+id/attacking_country_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attacking_country"/>
+            
+            
+            <Button
+                android:id="@+id/attack_country_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" />
+            
+            <TextView 
+                android:id="@+id/attack_army_count"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                />
+                
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/defend_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table_columns"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/defend"/>
+    
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true" 
+        android:layout_centerHorizontal="true"
+        android:id="@+id/attack_defend_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout 
+            android:id="@+id/defense_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         	android:gravity="center"
+            android:orientation="vertical">
+            
+            <TextView 
+                android:id="@+id/defense_results_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defend_result"/>
+            
+            <LinearLayout 
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:id="@+id/defend_dice_result_images">
+                
+                <ImageView
+                    android:id="@+id/defend_dice_result_one"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                
+                <ImageView 
+                    android:id="@+id/defend_dice_result_two"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/attack_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            
+            <TextView 
+                android:id="@+id/attack_results_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/attack_result"/>
+            
+            <LinearLayout 
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:id="@+id/attack_dice_result_images">
+                
+                <ImageView 
+                    android:id="@+id/attack_dice_result_one"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                
+                <ImageView 
+                    android:id="@+id/attack_dice_result_two"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                
+                <ImageView 
+                    android:id="@+id/attack_dice_result_three"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                
+             </LinearLayout>
+            
+        </LinearLayout>"
+        
+    </LinearLayout>
+    
+    <TextView 
+        android:id="@+id/battle_results_text"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/attack_defend_results"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+    
+    <Button 
+        android:id="@+id/ok_button_battle_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:layout_below="@id/battle_results_text"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+    
+
+</RelativeLayout>

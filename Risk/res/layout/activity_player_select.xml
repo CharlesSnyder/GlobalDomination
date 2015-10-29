@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.ramapo.csnyder.Risk.PlayerSelect" >
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:id="@+id/selection_table"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+    <TableLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_table"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_1" >
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="40sp"
+                android:id="@+id/player_text"
+                android:text="@string/players_select"/>
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_2" >
+            <Spinner 
+                android:id="@+id/player_spin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/player_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_3" >
+            <Spinner 
+                android:id="@+id/player_spin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/cpu_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_4" >
+            <Spinner 
+                android:id="@+id/player_spin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/cpu_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_5" >
+            <Spinner 
+                android:id="@+id/player_spin4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/cpu_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_6" >
+            <Spinner 
+                android:id="@+id/player_spin5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/cpu_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/player_row_7" >
+            <Spinner 
+                android:id="@+id/player_spin6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/cpu_array" />
+        </TableRow>
+    </TableLayout>
+    
+    <TableLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/difficulty_table"
+        android:layout_toRightOf="@id/player_table"
+        android:layout_toEndOf="@id/player_table"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp">
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_1" >
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="40sp"
+                android:id="@+id/difficulty_text"
+                android:text="@string/difficulty_select"/>
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_2" >
+            <Spinner 
+                android:id="@+id/difficulty_spin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/not_avail" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_3" >
+            <Spinner 
+                android:id="@+id/difficulty_spin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/difficulty_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_4" >
+            <Spinner 
+                android:id="@+id/difficulty_spin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/difficulty_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_5" >
+            <Spinner 
+                android:id="@+id/difficulty_spin4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/difficulty_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_6" >
+            <Spinner 
+                android:id="@+id/difficulty_spin5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/difficulty_array" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/difficulty_row_7" >
+            <Spinner 
+                android:id="@+id/difficulty_spin6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/difficulty_array" />
+        </TableRow>
+    </TableLayout>
+    
+    <TableLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_table"
+        android:layout_toRightOf="@id/difficulty_table"
+        android:layout_toEndOf="@id/difficulty_table"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp">
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_1" >
+            <TextView 
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="40sp"
+                android:id="@+id/colors_text"
+                android:text="@string/colors_select"/>
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_2" >
+            <Spinner 
+                android:id="@+id/color_spin1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/player_colors" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_3" >
+            <Spinner 
+                android:id="@+id/color_spin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ai_colors" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_4" >
+            <Spinner 
+                android:id="@+id/color_spin3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ai_colors" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_5" >
+            <Spinner 
+                android:id="@+id/color_spin4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ai_colors" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_6" >
+            <Spinner 
+                android:id="@+id/color_spin5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ai_colors" />
+        </TableRow>
+        <TableRow 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/color_row_7" >
+            <Spinner 
+                android:id="@+id/color_spin6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ai_colors" />
+        </TableRow>
+    </TableLayout>
+    
+    </RelativeLayout>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_game_button"
+        android:layout_below="@id/selection_table"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="50sp"
+        android:text="@string/start_game"
+        android:onClick="startGame"/>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/auto_card_and_text"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+        
+    	<Button 
+        	android:layout_height="wrap_content"
+        	android:layout_width="wrap_content"
+        	android:id="@+id/auto_bonus_card"
+        	android:layout_gravity="center" />
+    
+    	<TextView 
+        	android:layout_height="wrap_content"
+       	 	android:layout_width="wrap_content"
+        	android:id="@+id/auto_message"
+        	android:layout_marginTop="10dp"
+        	android:text="@string/auto_message"/>
+    	
+    	<Button 
+    	    android:layout_height="wrap_content"
+    	    android:layout_width="fill_parent"
+    	    android:id="@+id/auto_bonus_ok"
+    	    android:layout_marginTop="10dp"
+    	    android:text="@string/ok"/>
+    	
+    </LinearLayout>
+    
+
+    
+
+</RelativeLayout>
